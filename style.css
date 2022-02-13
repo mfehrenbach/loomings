@@ -1,4 +1,10 @@
 body {
 	/* This is from Google Fonts: https://fonts.google.com */
 	font-family: 'Cormorant Garamond', serif;
+
+	background-color: wheat;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 120%;
+	line-height: 1;
+	margin: 24px;
 }
