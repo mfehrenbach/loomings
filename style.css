@@ -4,7 +4,7 @@ body {
 
 	background-color: wheat;
 	color: rgba(0, 0, 0, 0.75); /* This is semi-transparent black. */
-	font-size: 133%;
+	font-size: 150%;
 	line-height: 1;
 	margin: 72px 24px; /* 72 is top/bottom, 24 for right/left. */
 }
@@ -36,12 +36,19 @@ h1 span {
 blockquote {
 	font-size: 150%;
 	margin-top: 96px;
-	padding-left: 96px;
+	padding-left: 180px;
 }
 
 blockquote span {
 	font-size: 200%;
 	font-style: italic;
+}
+
+blockquote em {
+	font-size: 66%;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 }
 
 p {
@@ -55,8 +62,22 @@ p:first-of-type {
 
 p em {
 	/* Fake some old-timey small caps. */
-	font-size: 65%;
+	font-size: 66%;
 	font-weight: bold;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
+}
+
+/* Targets third paragraph in a row. */
+p + p + p {
+	margin-top: 72px;
+	margin-left: auto;
+	font-style: italic;
+}
+
+hr {
+	border: rgba(0, 0, 0, 0.75) solid 2px;
+	margin-bottom: 40px;
+	margin-top: 120px;
+	max-width: 320px;
 }
