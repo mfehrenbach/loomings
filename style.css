@@ -2,21 +2,21 @@ body {
 	/* This is from Google Fonts: https://fonts.google.com */
 	font-family: 'Cormorant Garamond', serif;
 
-	background-color: wheat;
-	color: rgba(0, 0, 0, 0.75); /* This is semi-transparent black. */
-	font-size: 150%;
-	line-height: 1;
-	margin: 72px 24px; /* 72 is top/bottom, 24 for right/left. */
+	background-color: wheat; /* CSS has some named colors: https://htmlcolorcodes.com/color-names/ */
+	color: rgba(0, 0, 0, 0.75); /* But you can also specify hex or RGB values. This is semi-transparent black. */
+	font-size: 150%; /* Setting a larger base size. */
+	line-height: 1; /* This is like “leading” in CSS. */
+	margin: 72px 24px; /* When you have two values, the first is top/bottom, second is right/left. */
 }
 
 section {
 	margin: 0 auto; /* This centers the sections when they are at the max-width. */
-	max-width: 980px;
+	max-width: 980px; /* Caps the width. */
 }
 
 /* Space between lower sections. */
 section:not(:first-child) {
-	margin-top: 96px;
+	margin-top: 96px; /* There are also direction-specific property names. */
 }
 
 h1 {
@@ -25,30 +25,23 @@ h1 {
 	text-transform: uppercase;
 }
 
-/* This targets spans that are descendants of h1 */
+/* This targets spans that are descendants of h1. These are called “combinators”. */
 h1 span {
 	font-size: 50%;
 	font-style: italic;
-	letter-spacing: initial; /* These reset the inherited values from above. */
+	letter-spacing: initial; /* “initial” resets the inherited values from above. */
 	text-transform: initial;
 }
 
 blockquote {
 	font-size: 150%;
 	margin-top: 96px;
-	padding-left: 180px;
+	padding-left: 180px; /* Padding is “inside” and element, vs. margin “outside”. */
 }
 
 blockquote span {
 	font-size: 200%;
 	font-style: italic;
-}
-
-blockquote em {
-	font-size: 66%;
-	font-weight: bold;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
 }
 
 p {
@@ -60,7 +53,9 @@ p:first-of-type {
 	margin-top: 48px;
 }
 
-p em {
+/* You can use a comma to apply a CSS rule to multiple selectors! */
+p em,
+blockquote em {
 	/* Fake some old-timey small caps. */
 	font-size: 66%;
 	font-weight: bold;
@@ -76,7 +71,7 @@ p + p + p {
 }
 
 hr {
-	border: rgba(0, 0, 0, 0.75) solid 2px;
+	border: rgba(0, 0, 0, 0.75) solid 2px; /* The color, style, and size of the line. */
 	margin-bottom: 40px;
 	margin-top: 120px;
 	max-width: 320px;
@@ -85,13 +80,13 @@ hr {
 
 img {
 	display: block; /* Images are inline, by default. */
-	margin: 80px auto;
+	margin: 80px auto; /* 80 above/below, centered left/right. */
 	max-width: 36px;
 }
 
 /* I added a class to one image to target it separately. */
 .whale {
-	margin-right: initial;
+	margin-right: initial; /* This reset will make the whale go to the right edge. */
 	max-width: 800px;
 }
 
@@ -101,9 +96,9 @@ a {
 }
 
 a img {
-	display: inline; /* To get the hand next to the text, back to inline.*/
+	display: inline; /* To get the hand next to the text, take it back to inline.*/
 	height: 24px;
-	margin: initial;
+	margin: initial; /* Get rid of the margin we applied earlier to all images. */
 	margin-right: 12px; /* This is lower, so applies after the initial/reset. */
 }
 
