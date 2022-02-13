@@ -3,8 +3,60 @@ body {
 	font-family: 'Cormorant Garamond', serif;
 
 	background-color: wheat;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 120%;
+	color: rgba(0, 0, 0, 0.75); /* This is semi-transparent black. */
+	font-size: 133%;
 	line-height: 1;
-	margin: 24px;
+	margin: 72px 24px; /* 72 is top/bottom, 24 for right/left. */
+}
+
+section {
+	margin: 0 auto; /* This centers the sections when they are at the max-width. */
+	max-width: 980px;
+}
+
+/* Space between lower sections. */
+section:not(:first-child) {
+	margin-top: 96px;
+}
+
+h1 {
+	font-size: 350%;
+	letter-spacing: 0.25em; /* The em unit here is relative to the type size. */
+	text-transform: uppercase;
+}
+
+/* This targets spans that are descendants of h1 */
+h1 span {
+	font-size: 50%;
+	font-style: italic;
+	letter-spacing: initial; /* These reset the inherited values from above. */
+	text-transform: initial;
+}
+
+blockquote {
+	font-size: 150%;
+	margin-top: 96px;
+	padding-left: 96px;
+}
+
+blockquote span {
+	font-size: 200%;
+	font-style: italic;
+}
+
+p {
+	text-indent: 48px;
+	max-width: 75ch; /* Control the line length with character units. */
+}
+
+p:first-of-type {
+	margin-top: 48px;
+}
+
+p em {
+	/* Fake some old-timey small caps. */
+	font-size: 65%;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 }
