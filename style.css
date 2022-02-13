@@ -94,3 +94,16 @@ img {
 	margin-right: initial;
 	max-width: 800px;
 }
+
+a {
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+a img {
+	display: inline; /* To get the hand next to the text, back to inline.*/
+	height: 24px;
+	margin: initial;
+	margin-right: 12px; /* This is lower, so applies after the initial/reset. */
+}
+
