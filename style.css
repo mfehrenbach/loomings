@@ -81,3 +81,16 @@ hr {
 	margin-top: 120px;
 	max-width: 320px;
 }
+
+
+img {
+	display: block; /* Images are inline, by default. */
+	margin: 80px auto;
+	max-width: 36px;
+}
+
+/* I added a class to one image to target it separately. */
+.whale {
+	margin-right: initial;
+	max-width: 800px;
+}
